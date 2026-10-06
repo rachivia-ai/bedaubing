@@ -1,0 +1,4 @@
+import { z } from "zod";
+const phone=z.string().trim().min(7,"Ongeldig telefoonnummer").max(30).regex(/^[+\d\s().-]+$/,"Ongeldig telefoonnummer");
+export const reservationSchema=z.object({pickup:z.string().trim().min(3).max(160),destination:z.string().trim().min(3).max(160),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),time:z.string().regex(/^\d{2}:\d{2}$/),passengers:z.coerce.number().int().min(1).max(8),name:z.string().trim().min(2).max(100),phone,notes:z.string().max(500).optional().default(""),privacy:z.literal("accepted"),website:z.string().max(0).optional().default("")});
+export const contactSchema=z.object({name:z.string().trim().min(2).max(100),phone,email:z.string().email().max(160).or(z.literal("")),message:z.string().trim().min(5).max(1000),privacy:z.literal("accepted"),website:z.string().max(0).optional().default("")});

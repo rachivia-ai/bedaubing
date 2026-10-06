@@ -1,0 +1,3 @@
+import type { Metadata } from "next";import { LegalPage } from "@/components/legal-page";
+export const metadata:Metadata={title:"Cookiebeleid",alternates:{canonical:"/cookiebeleid"}};
+export default function Page(){return <LegalPage title="Cookiebeleid" intro="Deze website gebruikt standaard geen tracking- of marketingcookies."><h2>Noodzakelijke techniek</h2><p>De website kan strikt noodzakelijke technische gegevens verwerken om pagina’s en formulieren veilig te laten werken. Daarvoor is geen cookiebanner nodig.</p><h2>Geen tracking zonder toestemming</h2><p>Analytics, advertentiecookies en externe kaarten zijn niet standaard ingeschakeld. Als die later worden toegevoegd, moet eerst passende toestemming worden geregeld en dit beleid worden bijgewerkt.</p></LegalPage>}

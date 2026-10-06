@@ -1,0 +1,2 @@
+import { ContentPage } from "@/components/content-page";
+export function LegalPage({title,intro,children}:{title:string;intro:string;children:React.ReactNode}){return <ContentPage title={title} eyebrow="Informatie" intro={intro} cta={false}><article className="prose legal">{children}<p className="legal-note">Deze tekst is een praktische eerste versie en moet vóór publicatie worden gecontroleerd en aangevuld met de definitieve bedrijfsgegevens.</p></article></ContentPage>}
